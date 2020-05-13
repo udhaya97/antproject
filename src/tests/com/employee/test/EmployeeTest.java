@@ -2,6 +2,7 @@
 package com.employee.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import java.util.List;
 
@@ -76,7 +77,7 @@ public class EmployeeTest {
 	public void updateEmp()
 	{
 		
-		Employee empn = employeeMapper.getEmployee(167);
+		Employee empn = employeeMapper.getEmployee(227);
 		if(empn !=null){
 		empn.setEmpName("Gokul");
 
