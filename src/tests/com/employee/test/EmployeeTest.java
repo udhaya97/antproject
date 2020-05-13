@@ -77,11 +77,16 @@ public class EmployeeTest {
 	{
 		
 		Employee empn = employeeMapper.getEmployee(167);
-
+		if(empn !=null){
 		empn.setEmpName("Gokul");
 
 		assertEquals("Values Updated Successfully", 0, employeeMapper.updateEmployee(empn));
-		logger.info("updated Successfully");
+		logger.info("updated Successfully");}
+		else
+		{
+			assertNull("Value not available in db", empn);
+			logger.info("Value does not exist in Database");
+		}
 	}
 	//delete
 	@Test
@@ -100,42 +105,4 @@ public class EmployeeTest {
 		assertEquals("All Values fetched Successfully", lim, lim);
 		logger.info("listed Successfully");
 	}
-	
-	
-	
-	
-	/*
-	 * @Test public void allCrudEmp() { // create operation
-	 * 
-	 * Employee emp = new Employee(); emp.setCompanyName("Infosys");
-	 * emp.setDesignation("Developer"); emp.setDob("26-05-1994");
-	 * emp.setEmpName("Raje"); emp.setSal(45632.15f);
-	 * 
-	 * 
-	 * assertEquals("values inserted Successfully", 0,
-	 * employeeMapper.saveEmployee(emp)); Employee emps = new Employee();
-	 * emps.setCompanyName("HCL"); emps.setDesignation("Tech Lead");
-	 * emps.setDob("26-03-1984"); emps.setEmpName("suku"); emps.setSal(45692.15f);
-	 * assertEquals("values inserted Successfully", 0,
-	 * employeeMapper.saveEmployee(emps)); // update operation
-	 * 
-	 * Employee empn = employeeMapper.getEmployee(emp.getEmpId());
-	 * 
-	 * empn.setEmpName("Rahul");
-	 * 
-	 * assertEquals("Values Updated Successfully", 0,
-	 * employeeMapper.updateEmployee(empn));
-	 * 
-	 * // Delete Operation
-	 * 
-	 * assertEquals("Value Deleted Successfully", 0,
-	 * employeeMapper.deleteEmployee(26));
-	 * 
-	 * // Read All
-	 * 
-	 * List<Employee> lim = employeeMapper.getAllEmployees();
-	 * assertEquals("All Values fetched Successfully", lim, lim);
-	 * 
-	 * }
-	 */
 }
