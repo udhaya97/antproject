@@ -23,7 +23,7 @@ public class EmployeeController {
 
 	@Autowired
 
-	private EmployeeService empServ
+	private EmployeeService empServ;
 
 	
 
