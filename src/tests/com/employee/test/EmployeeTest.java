@@ -56,7 +56,7 @@ public class EmployeeTest {
 		emp.setCompanyName("Infosys");
 		emp.setDesignation("Developer");
 		emp.setDob("26-05-1994");
-		emp.setEmpName("RohithSharma");
+		emp.setEmpName("Sriram");
 		emp.setSal(45632.15f);
 		
 
@@ -65,7 +65,7 @@ public class EmployeeTest {
 		emps.setCompanyName("HCL");
 		emps.setDesignation("Tech Lead");
 		emps.setDob("26-03-1984");
-		emps.setEmpName("Virat Kohli");
+		emps.setEmpName("Mallika");
 		emps.setSal(45692.15f);
 		assertEquals("values inserted Successfully", 0, employeeMapper.saveEmployee(emps));
 		logger.info("Created Successfully");
