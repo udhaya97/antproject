@@ -7,7 +7,7 @@ public class Employee {
 	private String empName;
 	private float sal;
 	private String dob;
-	private String designation
+	private String designation;
 	
 	private String companyName;
 	
