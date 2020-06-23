@@ -9,7 +9,7 @@ public class Employee {
 	private String dob;
 	private String designation;
 	
-	private String companyName;
+	private String companyName
 	
 	
 	
